@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "./axios";
 import "./Banner.css";
 import requests from "./requests";
+import AddIcon from "@material-ui/icons/Add";
+import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 
 function Banner() {
   const [movie, setMovie] = useState([]);
@@ -42,8 +44,14 @@ function Banner() {
         </h1>
 
         <div className="banner__buttons">
-          <button className="banner__button">Play</button>
-          <button className="banner__button">My List</button>
+          <button className="banner__button">
+            <PlayArrowIcon />
+            Play
+          </button>
+          <button className="banner__button">
+            <AddIcon />
+            My List
+          </button>
         </div>
 
         <h1 className="banner__description">
